@@ -26,6 +26,9 @@ function cleanContent(content) {
 // POST /api/summarize
 router.post("/summarize", async (req, res) => {
   try {
+    // Dynamic import inside the async route handler
+    const fetch = (await import("node-fetch")).default;
+
     const {
       content,
       title = "Untitled Article",
@@ -71,9 +74,6 @@ Content:
 ${cleanedContent}
 
 Please provide a concise summary that captures the main points and key insights.`;
-
-    // Dynamic import for node-fetch
-    const fetch = (await import("node-fetch")).default;
 
     // Call OpenRouter API
     const response = await fetch(

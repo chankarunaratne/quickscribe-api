@@ -1,5 +1,5 @@
 async function testAPI() {
-  // Dynamic import for node-fetch
+  // Dynamic import inside the async function
   const fetch = (await import("node-fetch")).default;
 
   const testContent = `
