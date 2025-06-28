@@ -1,0 +1,27 @@
+{
+  "name": "quickscribe-api",
+  "version": "1.0.0",
+  "description": "AI-powered article summarization API for QuickScribe Chrome extension",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "summarization",
+    "ai",
+    "chrome-extension"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
