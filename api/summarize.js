@@ -65,7 +65,8 @@ router.post("/summarize", async (req, res) => {
     Provide a clear and well-structured summary that captures the main points and key insights. 
     Use bullet points or a short paragraph format. Keep the summary focused and avoid unnecessary details.`;
 
-    const userPrompt = `Please summarize the following article:
+    const userPrompt = `Please summarize the following article using 5-7 clear bullet points.  
+Each bullet should be concise and capture a key idea. Avoid paragraphs:
 
 Title: ${title}
 Author: ${author}
