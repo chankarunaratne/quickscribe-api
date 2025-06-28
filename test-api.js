@@ -1,6 +1,7 @@
-const fetch = require("node-fetch");
-
 async function testAPI() {
+  // Dynamic import for node-fetch
+  const fetch = (await import("node-fetch")).default;
+
   const testContent = `
     Artificial intelligence (AI) is transforming the way we live and work. 
     From virtual assistants to autonomous vehicles, AI technologies are becoming 

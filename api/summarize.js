@@ -1,5 +1,4 @@
 const express = require("express");
-const fetch = require("node-fetch");
 
 const router = express.Router();
 
@@ -72,6 +71,9 @@ Content:
 ${cleanedContent}
 
 Please provide a concise summary that captures the main points and key insights.`;
+
+    // Dynamic import for node-fetch
+    const fetch = (await import("node-fetch")).default;
 
     // Call OpenRouter API
     const response = await fetch(
