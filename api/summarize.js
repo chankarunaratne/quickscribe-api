@@ -63,18 +63,17 @@ router.post("/summarize", async (req, res) => {
     // Prepare the prompt for summarization
     const systemPrompt = `You are a helpful assistant that creates concise, informative summaries of articles. 
     Provide a clear and well-structured summary that captures the main points and key insights. 
-    Use bullet points or a short paragraph format. Keep the summary focused and avoid unnecessary details.`;
+    Use bullet points or a short paragraph format. Keep the summary focused and avoid unnecessary details. Do not include introductory sentences or explanations — only the bullet points.`;
 
-    const userPrompt = `Please summarize the following article using 5-7 clear bullet points.  
-Each bullet should be concise and capture a key idea. Avoid paragraphs:
+    const userPrompt = `Summarize the article below using 5–7 bullet points. 
+Each bullet should be clear, specific, and capture a key idea from the article. 
+Do not include any introductions, explanations, or paragraphs. Just return the bullet points.
 
 Title: ${title}
 Author: ${author}
 
 Content:
-${cleanedContent}
-
-Please provide a concise summary that captures the main points and key insights.`;
+${cleanedContent}`;
 
     // Call OpenRouter API
     const response = await fetch(
